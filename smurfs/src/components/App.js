@@ -16,7 +16,7 @@ function App(props) {
 				</div>
 			)}
 			{/* {props.error != "" && <p>error!!!</p>} */}
-			<button> Get YOU SOME SMURFS</button>
+			<button> onClick={props.getSmurf}Get YOU SOME SMURFS.</button>
 		</div>
 	);
 
