@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { getSmurf } from '../actions';
+import { getSmurf, buildVillage } from '../actions';
 import "./App.css";
 
 function App(props) {
@@ -16,6 +16,15 @@ function App(props) {
 				</div>
 			)}
 			{/* {props.error != "" && <p>error!!!</p>} */}
+
+			<form onSubmit={props.buildVillage}>
+				<input type="text"
+					value={props.smurfs.name}
+					name="name"
+					place="Name your blue One"
+				/>
+			</form>
+
 			<button onClick={props.getSmurf}>Get YOU SOME SMURFS.</button>
 		</div>
 	);
@@ -30,4 +39,4 @@ const mapStateToProps = state => {
 	}
 }
 
-export default connect(mapStateToProps, { getSmurf })(App);
+export default connect(mapStateToProps, { getSmurf, buildVillage })(App);

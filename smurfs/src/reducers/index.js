@@ -2,7 +2,7 @@ import { FETCH_SMURF_START, FETCH_SMURF_SUCCESS, FETCH_SMURF_FAILURE } from '../
 
 
 const initialState = {
-	smurfs: [],
+	smurfs: ["look a smurf"],
 	error: "",
 	loading: false
 };

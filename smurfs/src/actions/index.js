@@ -12,3 +12,11 @@ export const getSmurf = () => dispatch => {
 
 
 
+export const buildVillage = () => dispatch => {
+	dispatch({ type: FETCH_SMURF_START });
+	axios.post("http://localhost:3333/smurfs")
+		.then(response => dispatch({ type: FETCH_SMURF_SUCCESS, payload: response.data }))
+		.catch(error => dispatch({ type: FETCH_SMURF_FAILURE, payload: error.response }))
+}
+
+
