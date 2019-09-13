@@ -4,10 +4,16 @@ export const FETCH_SMURF_SUCCESS = "FETCH_SMURF_SUCCESS";
 export const FETCH_SMURF_FAILURE = "FETCH_SMURF_FAILURE";
 
 export const getSmurf = () => dispatch => {
+
 	dispatch({ type: FETCH_SMURF_START });
 	axios("http://localhost:3333/smurfs")
-		.then(response => dispatch({ type: FETCH_SMURF_SUCCESS, payload: response.data }))
-		.catch(error => dispatch({ type: FETCH_SMURF_FAILURE, payload: error.response }))
+		.then(response =>
+			dispatch({
+				type: FETCH_SMURF_SUCCESS, payload: response.data
+			}))
+		.catch(error => dispatch({
+			type: FETCH_SMURF_FAILURE, payload: error.response
+		}))
 }
 
 

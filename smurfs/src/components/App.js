@@ -15,7 +15,6 @@ function App(props) {
 					<h2>{props.smurfs.height}</h2>
 				</div>
 			)}
-			{/* {props.error != "" && <p>error!!!</p>} */}
 
 			<form onSubmit={props.buildVillage}>
 				<input type="text"
